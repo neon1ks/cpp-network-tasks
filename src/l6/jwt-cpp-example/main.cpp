@@ -20,6 +20,7 @@ int main()
 
     verifier.verify(decoded);
 
-    for(auto& e : decoded.get_payload_claims())
+    // for(auto& e : decoded.get_payload_claims()) // old api
+    for(auto& e : decoded.get_payload_json())
         std::cout << e.first << " = " << e.second << std::endl;
 }
